@@ -9,3 +9,8 @@
 .carossel{
 color: rgb(53, 23, 23);
 }
+
+.scrollView{
+  overflow: auto;
+  white-space: nowrap;
+}
