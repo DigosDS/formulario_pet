@@ -1,5 +1,8 @@
 let btn = document.getElementById('btn');
 let div = document.getElementById('resultado');
+const button = document.querySelector("button")
+const modal = document.querySelector("dialog")
+const buttonClose = document.querySelector("dialog button")
 
 const arrPet = []
 
@@ -28,12 +31,14 @@ function cadastrar() {
 
 }
 
+
 function imprimir()
 {
 
         div.innerHTML= '';
 
     for(let i= 0; arrPet.length; i++){
+
         div.innerHTML += `
         <tr> 
         <th scope="row">${i+1}</th>
@@ -43,11 +48,12 @@ function imprimir()
         <td>${arrPet[i].altura}</td>
         <td>${arrPet[i].categoria}</td>
         <td>${arrPet[i].data}</td>
-        <td>${arrPet[i].foto}</td>
+        <td>
+        <button>Ver foto</button> 
+        <dialog>${arrPet[i].foto} <button>Ok</button> </dialog> </td>
         </tr>        
          `
     }
 }
 
 btn.addEventListener('click', cadastrar)
-
